@@ -1,5 +1,6 @@
 import os
 import dj_database_url
+import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -47,7 +48,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'webbot.wsgi.application'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'webbot.settings'
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
 
 DATABASES = {
     'default': {
