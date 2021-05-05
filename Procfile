@@ -1,1 +1,1 @@
-web: gunicorn twittersentimenanalysis.wsgi --log-file -
+web: gunicorn webbot.wsgi --log-file -
