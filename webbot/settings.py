@@ -6,7 +6,7 @@ SECRET_KEY = 'fq*&p!dk=xo8o(ljfft337&)9q@&$_3un!tk$d2paz6beu!)1i'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://twittersentimenanalysis.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
