@@ -1,10 +1,11 @@
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'fq*&p!dk=xo8o(ljfft337&)9q@&$_3un!tk$d2paz6beu!)1i'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://twittersentimenanalysis.herokuapp.com']
 
