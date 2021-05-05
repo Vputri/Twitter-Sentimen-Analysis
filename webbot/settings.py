@@ -6,9 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'fq*&p!dk=xo8o(ljfft337&)9q@&$_3un!tk$d2paz6beu!)1i'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['twittersentimenanalysis.herokuapp.com']
+ALLOWED_HOSTS = ['twittersentimenanalysis.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -85,3 +85,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+STATIC_URL = '/static/'
+
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
