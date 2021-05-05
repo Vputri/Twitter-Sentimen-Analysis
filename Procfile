@@ -1,1 +1,1 @@
-web: gunicorn webbot.wsgi.application --log-file -
+web: python3 manage.py run_gunicorn
