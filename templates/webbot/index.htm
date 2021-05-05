@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Twitter Sentiment Analysis</title>
+    </head>
+
+    <style type="text/css">
+    	.header{
+    		background-color:#B0C4DE;
+    		text-align: center;
+    	}
+    	table{
+    		width:100%;
+    		border:0;
+    		border-spacing:0;
+		  }
+  		td{
+  			padding:30px;
+  			width : 87%;
+  		}
+  		h4{padding-top: 2%;}
+  		.isi{height: 390px;}
+  		.cari{text-align: center;}
+  		.recom{color: darkgray;}
+      .hasil{text-align: center;}
+      button{height: 40px;}
+      input[type=text] {
+        width: 400px;
+        height: 40px;
+      }
+    </style>
+
+    <body>
+        <table>
+            <tr>
+                <td class="header">TWITTER SENTIMENT ANALYSIS<br><b>CORONA VACCINE</b></td>
+            </tr>
+        </table>
+
+        <table class="isi">
+            <tr>
+                <td>
+                   <form method="get" name="sort-btn" action="/bot_search/">
+                       <div class="cari">
+                       		<input type="text" name="query" placeholder="Search">
+	                        <button type="submit">Analysis</button>
+                       		{% if ans %}
+                         		<h4 class="recom">Sentiment Analysis Results from tweets:</h4>
+                            <p class="">{{query}} : <b>{{ans}}<b> </p>
+                          {% endif %}
+                       </div>
+                  </form>
+                </td>
+            </tr>
+        </table><br>
+
+        <table>
+            <tr>
+                <td class="header">
+                	VIKA PUTRI ARIYANTI<br><b>GUNADARMA UNIVERSITY</b>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
