@@ -6,9 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'fq*&p!dk=xo8o(ljfft337&)9q@&$_3un!tk$d2paz6beu!)1i'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['twittersentimenanalysis.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['twittersentimenanalysis.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webbot',
 ]
 
 MIDDLEWARE = [
