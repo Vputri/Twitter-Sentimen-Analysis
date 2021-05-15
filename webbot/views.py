@@ -1,15 +1,18 @@
 from django.shortcuts import render
 import joblib
+import os
+
+my_dir = os.path.dirname(__file__)
+vector_file_path = os.path.join(my_dir, 'vektor.sav')
+mnb_file_path = os.path.join(my_dir, 'MNB.sav')
 
 def index(request):
     return render(request, 'webbot/index.htm')
 
 def bot_search(request):
     query = request.GET.get('query')
-    filename = '/home/vika/sentimen analisis/results/vektor.sav'
-    filename1 = '/home/vika/sentimen analisis/results/MNB.sav'
-    vektor = joblib.load(filename)
-    model = joblib.load(filename1)
+    vektor = joblib.load(vector_file_path)
+    model = joblib.load(mnb_file_path)
     result = model.predict(vektor.transform([query]))
     if (result == [2]) :
         ans = "negatif"
